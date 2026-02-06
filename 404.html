@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Redirecting…</title>
+<script>
+  (function() {
+    var oldPath = window.location.pathname.replace(/^\/+/, ''); // drop leading slash
+    var newUrl = 'https://pivotools.github.io/pivotools-quarto-blog/' + oldPath + window.location.search + window.location.hash;
+    window.location.replace(newUrl);
+  })();
+</script>
+<noscript>
+  <meta http-equiv="refresh" content="0; url=https://pivotools.github.io/pivotools-quarto-blog/">
+  <p>
+    The pivotools blog can be found at 
+    <a href="https://pivotools.github.io/pivotools-quarto-blog/">https://pivotools.github.io/pivotools-quarto-blog/</a>.
+  </p>
+</noscript>

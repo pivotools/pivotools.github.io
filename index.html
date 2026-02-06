@@ -1,17 +1,41 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
-<title>Redirecting…</title>
-<script>
-  (function() {
-    var oldPath = window.location.pathname.replace(/^\/+/, ''); // drop leading slash
-    var newUrl = 'https://pivotools.github.io/pivotools-quarto-blog/' + oldPath + window.location.search + window.location.hash;
-    window.location.replace(newUrl);
-  })();
-</script>
-<noscript>
-  <meta http-equiv="refresh" content="0; url=https://pivotools.github.io/pivotools-quarto-blog/">
-  <p>
-    The pivotools blog can be found at 
-    <a href="https://pivotools.github.io/pivotools-quarto-blog/">https://pivotools.github.io/pivotools-quarto-blog/</a>.
-  </p>
-</noscript>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>pivotools Blog</title>
+  <!-- Redirect no-JS users to blog root (meta refresh must be in head) -->
+  <noscript>
+    <meta http-equiv="refresh" content="0; url=https://pivotools.github.io/pivotools-quarto-blog/">
+  </noscript>
+
+  <!-- Same Open Graph as main page (index.qmd) so the card looks identical -->
+  <meta property="og:title" content="pivotools Blog">
+  <meta property="og:description" content="News and updates from the pivotools team">
+  <meta property="og:url" content="https://pivotools.github.io/pivotools-quarto-blog/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://pivotools.github.io/pivotools-quarto-blog/default-preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="pivotools">
+
+  <!-- Twitter / X Cards (same as main page) -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="pivotools Blog">
+  <meta name="twitter:description" content="News and updates from the pivotools team">
+  <meta name="twitter:image" content="https://pivotools.github.io/pivotools-quarto-blog/default-preview.png">
+
+  <meta name="description" content="News and updates from the pivotools team">
+</head>
+<body>
+  <script>
+    (function() {
+      var oldPath = window.location.pathname.replace(/^\/+/, '');
+      var base = 'https://pivotools.github.io/pivotools-quarto-blog/';
+      var newUrl = base + oldPath + window.location.search + window.location.hash;
+      window.location.replace(newUrl);
+    })();
+  </script>
+  <p>Redirecting to <a href="https://pivotools.github.io/pivotools-quarto-blog/">pivotools Blog</a>…</p>
+</body>
+</html>
+
